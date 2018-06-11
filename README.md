@@ -78,6 +78,8 @@ The calculation time was measured for : Intel® Core™ i7-6820HQ CPU @ 2.70GHz 
 The average was around 6s. 
 
 ## Usage
+Project is gradle based so you can build it with `clean build` and find jar in `build/libs`
+
 As a default program shows only number of solutions and the calculation time. To show results in console pass `-p` argument and to pass results to file add `-pf` argument.
 
 ## Why so few streams?
