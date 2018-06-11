@@ -1,0 +1,27 @@
+group 'pl.jedrzejfrankowski.internal'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.8
+jar {
+    manifest {
+        attributes 'Main-Class': 'ChessMain'
+    }
+}
+repositories {
+    mavenCentral()
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+//    options.compilerArgs << "-XX:CompileThreshold" << "-XX:TieredCompilation"
+}
+
+dependencies {
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.1-groovy-2.4'
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.0', ext: 'pom'
+    compileOnly "org.projectlombok:lombok:1.16.16"
+
+}
