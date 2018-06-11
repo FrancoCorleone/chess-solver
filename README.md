@@ -51,6 +51,7 @@ It is important to notice that there are two nested loops here:
 - place every remaining figure as "a next one"
 That's were those 2 rules of "no duplicates" go in.
 
+
 ## Example solutions
 - 3x3 with 2 Kings and 1 Rook: 4 solutions, calculation time < 1ms
 ```
