@@ -38,7 +38,9 @@ Using those two rules combined we get every scenario without repetitions.
 3. Add taken field two taken fields array.
 4. Remove placed figure from figures
 5. Start over - if there are no more figures to place -> add configuration to global configurations list.
-####Example
+
+
+#### Example
 Figures: KNIGHT, 2x KING
 1. Place KNIGHT on field 0
 2. Knocked fields = 6,9; Remaining free fields=1,2,3,4,5,7,8,10,....,15
