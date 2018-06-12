@@ -6,7 +6,7 @@ On board of MxN one must place figures: rook, bishop, queen, king, knight. Numbe
 
 The rule is: **none of the figures may knock another**.
 
-The goal is: **find all unique configurations**.
+The goal is: **find all unique configurations in shortest time**.
 ## Solution
 ***\*Before reading any further, take a note that full description will be presented. Try your own first!***\*
 
@@ -22,7 +22,7 @@ It is a classic example of recursively run function. For algorithmic purposes I 
     ---------------------------------
     |   12  |   13  |   14  |   15  |
 ```
-With that is relatively easy to create mathematical formulas for every piece. For details take a dive into implementation of `getMovementPositions` method of `Figure` interface.
+With that, it is relatively easy to create mathematical formulas for every piece. For details, take a dive into implementation of `getMovementPositions` method of `Figure` interface.
 
 It seems obvious that every possible solution should be checked but to spare some time let's observe two things:
 1. If there are multiple pieces of the same type, there is no need to calculate them separately.
@@ -84,6 +84,6 @@ As a default program shows only number of solutions and the calculation time. To
 
 ## Why so few streams?
 If you look closely at my code you can see that in few places I resign from using Stream API from Java8 and even from foreach loop in favor of iterator.
-Since time is crucial here I would recommend reading [THIS](https://blog.takipi.com/benchmark-how-java-8-lambdas-and-streams-can-make-your-code-5-times-slower/)
+Since time is crucial in this task, I would recommend reading [THIS](https://blog.takipi.com/benchmark-how-java-8-lambdas-and-streams-can-make-your-code-5-times-slower/)
 
 Have fun and don't hesitate to leave feedback!
