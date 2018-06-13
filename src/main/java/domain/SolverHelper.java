@@ -1,7 +1,7 @@
 package domain;
 
+import model.Figure;
 import shared.FieldType;
-import shared.Figure;
 
 import java.util.*;
 import java.util.stream.IntStream;
@@ -12,7 +12,7 @@ import static java.util.stream.Collectors.toCollection;
  * @author Jędrzej Frankowski
  * <p>
  * This class creates cache for movement positions starting from every position on defined board for every piece defined
- * which are then stored in chessBoard field. External list constist of 7 (all fields in FieldType) elements. Each one
+ * which are then stored in chessBoard field. External list constist of 6 (all fields in FieldType) elements. Each one
  * consists of List of positions on board and every position contains a Set of knocked positions.
  */
 public class SolverHelper {

@@ -45,7 +45,6 @@ public class BoardWriter {
     private static char getChar(FieldType fieldType) {
         switch (fieldType) {
             case FREE:
-            case KNOCKED:
                 return '*';
             case KING:
                 return 'K';

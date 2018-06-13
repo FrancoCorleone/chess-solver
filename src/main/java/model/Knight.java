@@ -1,7 +1,6 @@
 package model;
 
 import shared.FieldType;
-import shared.Figure;
 
 import java.util.HashSet;
 import java.util.Objects;

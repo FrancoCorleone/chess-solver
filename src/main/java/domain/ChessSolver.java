@@ -1,8 +1,8 @@
 package domain;
 
 import lombok.Data;
+import model.Figure;
 import shared.FieldType;
-import shared.Figure;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -43,13 +43,14 @@ public class ChessSolver {
         SolverHelper.init(length, height, distinctFigures);
         Instant stopCache = Instant.now();
         List<Integer> positionsWithFiguresOn = Collections.emptyList();
+        FieldType[] board = Collections.nCopies(SolverHelper.maxSize, FREE).toArray(new FieldType[SolverHelper.maxSize]);
+        List<Integer> freePositions = IntStream.range(0, board.length).boxed().collect(toList());
         distinctFigures
                 .parallelStream()
                 .forEach(figure -> {
-                    FieldType[] board = Collections.nCopies(SolverHelper.maxSize, FREE).toArray(new FieldType[SolverHelper.maxSize]);
                     IntStream.range(0, board.length)
                             .parallel()
-                            .forEach(boardIndex -> solveConfiguration(figures, figure, board, boardIndex, IntStream.range(0, board.length).boxed().collect(toList()), positionsWithFiguresOn));
+                            .forEach(boardIndex -> solveConfiguration(figures, figure, board, boardIndex, freePositions, positionsWithFiguresOn));
                 });
         Instant end = Instant.now();
         cacheTime = Duration.between(startCache, stopCache);

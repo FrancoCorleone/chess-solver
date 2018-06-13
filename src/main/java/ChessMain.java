@@ -1,7 +1,6 @@
 import domain.BoardWriter;
 import domain.ChessSolver;
 import model.*;
-import shared.Figure;
 
 import java.io.FileNotFoundException;
 import java.util.*;

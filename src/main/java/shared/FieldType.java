@@ -9,8 +9,7 @@ public enum  FieldType {
     KING(2),
     QUEEN(3),
     KNIGHT(4),
-    FREE(5),
-    KNOCKED(6);
+    FREE(5);
 
     FieldType(int value) {
         this.value = value;

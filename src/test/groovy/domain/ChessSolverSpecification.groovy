@@ -1,10 +1,10 @@
 package domain
 
+import model.Figure
 import model.King
 import model.Knight
 import model.Rook
 import shared.FieldType
-import shared.Figure
 import spock.lang.Specification
 
 /**

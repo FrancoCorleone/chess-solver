@@ -2,7 +2,6 @@ package model;
 
 import lombok.NoArgsConstructor;
 import shared.FieldType;
-import shared.Figure;
 import shared.MoveStraight;
 
 import java.util.Collection;
